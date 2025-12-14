@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canelo - Información</title>
+    <link rel="stylesheet" href="perritos.css"> <!-- Usa Tus Mismos Estilos -->
+</head>
+<body>
+<style>
+    /* ======================= */
+/*       ESTILOS BASE       */
+/* ======================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #011f4b;
+}
+
+/* ======================= */
+/*        HEADER            */
+/* ======================= */
+
+.header {
+    width: 100%;
+    background: linear-gradient(to right, #020c27, #02235b);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.titulo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #a8c9ff;
+}
+
+/* ======================= */
+/*     PÁGINA DE PERRO     */
+/* ======================= */
+
+.contenedor-perro {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.img-perro {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.15);
+}
+
+.nombre-perro {
+    font-size: 35px;
+    margin: 20px 0 10px;
+    font-weight: 700;
+    color: #03183b;
+}
+
+.descripcion-perro {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ======================= */
+/*       BOTÓN ADOPTAR     */
+/* ======================= */
+
+.btn-adoptar {
+    display: inline-block;
+    background-color: #011f4b;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 25px;
+    transition: 0.3s ease;
+}
+
+.btn-adoptar:hover {
+    background-color: #03316c;
+}
+
+/* ======================= */
+/*     RESPONSIVE          */
+/* ======================= */
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 20px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+        font-size: 15px;
+    }
+
+    .contenedor-perro {
+        padding: 20px;
+    }
+
+    .nombre-perro {
+        font-size: 28px;
+    }
+
+    .descripcion-perro {
+        font-size: 16px;
+    }
+
+    .btn-adoptar {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+.seccion {
+        margin-top: 30px;
+        background: #eef5ff;
+        padding: 20px;
+        border-left: 5px solid #020c27;
+        border-radius: 10px;
+    }
+    footer {
+        text-align: center;
+        background-color: #020c27;
+        color: white;
+        padding: 10px;
+        margin-top: 40px;
+    }
+</style>
+    <!-- HEADER IGUAL AL DE TU PÁGINA PRINCIPAL -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="imagenes/logo.jpg" alt="Logo Doggy Tec" class="logo">
+        </div>
+        <nav class="nav">
+            <a href="pagina2.html">Inicio</a>
+            <a href="registrate.html">Regístrate</a>
+            <a href="contacto2.html">Contacto</a>
+            <a href="formulario.html">Test de Adopción</a>
+        </nav>
+    </header>
+
+    <div class="contenedor-perro">
+        <img src="imagenes/0899eafb344f09b3656c18938718e1ff.jpg" class="img-perro" alt="Canelo">
+
+        <h2 class="nombre-perro">Canelo</h2>
+
+        <p class="descripcion-perro">
+            Canelo es un perrito energético, tierno y muy inteligente. Le encanta jugar,
+            correr, explorar y recibir cariño. Fue encontrado cuidando a otros perritos más
+            pequeños, demostrando que tiene un corazón noble y protector.
+            <br><br>
+            Es perfecto para una familia activa, personas que disfruten ejercitarse o quienes
+            busquen un compañero leal que los acompañe en aventuras.
+            <br><br>
+            Canelo está <b>esterilizado</b>, <b>vacunado</b>, <b>desparasitado</b> y completamente
+            listo para comenzar una nueva vida lleno de amor.
+        </p>
+
+
+       <div class="seccion">
+        <h3>Cuidados necesarios</h3>
+        <p>• Paseos diarios  
+           • Revisión veterinaria mensual  
+           • Alimentación balanceada para raza mediana  
+           • Mucho cariño y juegos  
+        </p>
+    </div>
+
+    <div class="seccion">
+        <h3>Proceso de adopción</h3>
+        <p>1. Llena el formulario inicial de adopción.<br>
+           2. Nos pondremos en contacto para una breve entrevista.<br>
+           3. Realizamos una visita para conocer el entorno donde vivirá.<br>
+           4. Firmas el compromiso de adopción responsable.<br>
+           5. Firulais se integra a tu familia con su kit de bienvenida 🐾
+        </p>
+    </div>
+
+<footer>
+    © 2025 DoggyTec – Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
