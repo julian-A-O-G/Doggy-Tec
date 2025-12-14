@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Adopción DoggyTec</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8ff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #003366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: auto;
+        }
+
+        button:hover {
+            background-color: #0055aa;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+
+        .apto {
+            background-color: #c8f7c5;
+            color: #1a7c1c;
+        }
+
+        .no-apto {
+            background-color: #ffd3d3;
+            color: #a10000;
+        }
+        .encabezado {
+            background-color: #020c27;
+            color: white;
+    
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0B4D26;
+        }
+        .acciones a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="top-bar">
+            <img src="imagenes/logo.jpg" alt="Logo" class="logo" width="150" height="200">
+            <div class="acciones">
+                <a href="index.html">Inicio</a>
+                <a href="registrate.html">Regístrate</a>
+                <a href="contacto2.html">Contacto</a>
+                <a href="formulario.html">Test de Adopcion</a>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+    <h2>🐶 Test para Candidatos a Adoptar un Perrito</h2>
+
+    <form id="testForm">
+
+        <!-- 20 preguntas -->
+        <div class="question"><p>1. ¿Tienes tiempo para pasear a un perrito todos los días?</p>
+            <input type="radio" name="p1" value="1"> Sí <input type="radio" name="p1" value="0"> No</div>
+
+        <div class="question"><p>2. ¿Tu hogar tiene espacio suficiente para un perrito?</p>
+            <input type="radio" name="p2" value="1"> Sí <input type="radio" name="p2" value="0"> No</div>
+
+        <div class="question"><p>3. ¿Tienes estabilidad económica para cubrir gastos veterinarios?</p>
+            <input type="radio" name="p3" value="1"> Sí <input type="radio" name="p3" value="0"> No</div>
+
+        <div class="question"><p>4. ¿Puedes comprometerte por al menos 10 a 15 años de cuidado?</p>
+            <input type="radio" name="p4" value="1"> Sí <input type="radio" name="p4" value="0"> No</div>
+
+        <div class="question"><p>5. ¿Tu familia o compañeros de casa están de acuerdo?</p>
+            <input type="radio" name="p5" value="1"> Sí <input type="radio" name="p5" value="0"> No</div>
+
+        <div class="question"><p>6. ¿Puedes llevar a tu perrito al veterinario cuando lo necesite?</p>
+            <input type="radio" name="p6" value="1"> Sí <input type="radio" name="p6" value="0"> No</div>
+
+        <div class="question"><p>7. ¿Estás dispuesto(a) a limpiar y mantener su espacio?</p>
+            <input type="radio" name="p7" value="1"> Sí <input type="radio" name="p7" value="0"> No</div>
+
+        <div class="question"><p>8. ¿Puedes dedicarle tiempo para jugar y darle atención?</p>
+            <input type="radio" name="p8" value="1"> Sí <input type="radio" name="p8" value="0"> No</div>
+
+        <div class="question"><p>9. ¿Estás consciente de que un perro puede enfermar y requerir cuidados especiales?</p>
+            <input type="radio" name="p9" value="1"> Sí <input type="radio" name="p9" value="0"> No</div>
+
+        <div class="question"><p>10. ¿Puedes cubrir gastos como alimento, vacunas y desparasitación?</p>
+            <input type="radio" name="p10" value="1"> Sí <input type="radio" name="p10" value="0"> No</div>
+
+        <div class="question"><p>11. ¿Tu estilo de vida te permite tener un perro sin descuidarlo?</p>
+            <input type="radio" name="p11" value="1"> Sí <input type="radio" name="p11" value="0"> No</div>
+
+        <div class="question"><p>12. ¿Sabes que un perrito requiere paciencia para educarlo?</p>
+            <input type="radio" name="p12" value="1"> Sí <input type="radio" name="p12" value="0"> No</div>
+
+        <div class="question"><p>13. ¿Puedes evitar dejarlo solo por largos periodos?</p>
+            <input type="radio" name="p13" value="1"> Sí <input type="radio" name="p13" value="0"> No</div>
+
+        <div class="question"><p>14. ¿Cuentas con un área segura para que el perrito no escape?</p>
+            <input type="radio" name="p14" value="1"> Sí <input type="radio" name="p14" value="0"> No</div>
+
+        <div class="question"><p>15. ¿Tu motivación para adoptar es dar amor y no solo moda?</p>
+            <input type="radio" name="p15" value="1"> Sí <input type="radio" name="p15" value="0"> No</div>
+
+        <div class="question"><p>16. ¿Puedes afrontar gastos de emergencia si algo grave ocurre?</p>
+            <input type="radio" name="p16" value="1"> Sí <input type="radio" name="p16" value="0"> No</div>
+
+        <div class="question"><p>17. ¿Has convivido con perros anteriormente?</p>
+            <input type="radio" name="p17" value="1"> Sí <input type="radio" name="p17" value="0"> No</div>
+
+        <div class="question"><p>18. ¿Tienes tiempo para enseñarle obediencia básica?</p>
+            <input type="radio" name="p18" value="1"> Sí <input type="radio" name="p18" value="0"> No</div>
+
+        <div class="question"><p>19. ¿Puedes aceptar que un perro puede romper cosas o ensuciar mientras aprende?</p>
+            <input type="radio" name="p19" value="1"> Sí <input type="radio" name="p19" value="0"> No</div>
+
+        <div class="question"><p>20. ¿Estás dispuesto(a) a darle cariño, respeto y cuidados todos los días?</p>
+            <input type="radio" name="p20" value="1"> Sí <input type="radio" name="p20" value="0"> No</div>
+
+        <button type="button" onclick="evaluarTest()">Enviar respuestas</button>
+    </form>
+
+    <div id="resultado"></div>
+</div>
+
+<script>
+    function evaluarTest() {
+        const form = document.getElementById("testForm");
+        const datos = new FormData(form);
+
+        let puntaje = 0;
+
+        for (let value of datos.values()) {
+            puntaje += parseInt(value);
+        }
+
+        const resultado = document.getElementById("resultado");
+        resultado.style.display = "block";
+
+        if (puntaje >= 15) {
+            resultado.textContent = "🎉 ¡Felicidades! Eres un excelente candidato para adoptar un perrito. ❤️🐶";
+            resultado.className = "apto";
+        } else {
+            resultado.textContent = "😢 Por ahora no cumples con todos los requisitos para adoptar. Pero puedes ayudar de otras formas en el rescate.";
+            resultado.className = "no-apto";
+        }
+    }
+</script>
+
+</body>
+</html>
+
