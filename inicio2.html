@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doggy Tec - Inicio</title>
+<link rel="stylesheet" href="inicio.css">
+</head>
+<style>
+/* ======== ESTILOS GENERALES ======== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #020c27;
+}
+
+/* ======== HEADER ======== */
+.header {
+    background: #020c27;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 65px;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37; /* Dorado institucional */
+}
+
+/* ======== HERO ======== */
+.hero {
+    background: linear-gradient(rgba(2,12,39,0.7), rgba(2,12,39,0.7)),
+    url('imagenes/perritosHero.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #d4af37; /* Dorado */
+    color: #020c27;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* ======== SECCIONES ======== */
+.bloque,
+.bloque-alt {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.bloque-alt {
+    background: #020c27;
+    color: white;
+}
+
+.titulo-seccion {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #020c27;
+    font-weight: bold;
+}
+
+.bloque-alt .titulo-seccion {
+    color: #d4af37;
+}
+
+.texto {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* ======== TARJETAS DE OBJETIVOS ======== */
+.objetivos-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 25px;
+}
+
+.objetivo-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border-top: 6px solid #d4af37;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.objetivo-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.objetivo-card h3 {
+    margin-bottom: 10px;
+    color: #020c27;
+}
+
+.objetivo-card p {
+    font-size: 1rem;
+}
+
+/* ======== SECCIÓN INSTITUCIONAL ======== */
+.institucional img {
+    margin-top: 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ======== FOOTER ======== */
+.footer {
+    background: #020c27;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
+.logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0B4D26;
+        }
+</style>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <img src="imagenes/logo.jpg" class="logo" alt="Logo Doggy Tec">
+    <nav>
+    
+        <a href="index.html">Página Principal</a>
+        <a href="contacto2.html">Contacto</a>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Transformando vidas, una huellita a la vez</h1>
+        <p>Comprometidos con el rescate, rehabilitación y bienestar animal.</p>
+        <button class="btn">UNETE A ESTA MISION!!!!</button>
+    </div>
+</section>
+
+<!-- ================= MISIÓN ================= -->
+<section class="bloque">
+    <h2 class="titulo-seccion">Nuestra Misión</h2>
+    <p class="texto">
+        Nuestra misión es brindar una segunda oportunidad a todos los perritos que han sido abandonados, 
+        maltratados o que viven en situación de calle. Nos comprometemos a rescatarlos, brindarles atención médica,
+        rehabilitación física y emocional, y prepararlos para encontrar un hogar responsable y lleno de amor.
+        Trabajamos activamente en campañas de esterilización y castración para reducir la sobrepoblación canina
+        y evitar que más animales sufran en las calles. Creemos firmemente que cada perrito merece ser visto,
+        escuchado y cuidado, por eso dedicamos nuestro esfuerzo a proteger su bienestar y promover una cultura de 
+        respeto y empatía hacia ellos.
+    </p>
+</section>
+
+<!-- ================= VISIÓN ================= -->
+<section class="bloque bloque-alt">
+    <h2 class="titulo-seccion">Nuestra Visión</h2>
+    <p class="texto">
+        Ser una organización reconocida a nivel regional por nuestro impacto en la disminución de perros en situación 
+        de calle y por la transformación positiva en la vida de los animales rescatados. Aspiramos a construir una 
+        comunidad consciente y responsable, donde la adopción, la esterilización y el cuidado digno sean prácticas 
+        comunes.
+        Nuestra visión es lograr un entorno donde cada perrito tenga un hogar seguro, libre de violencia y abandono,
+        y donde la sociedad comprenda que su bienestar también forma parte del bienestar humano. Soñamos con un futuro
+        donde la compasión sea más fuerte que la indiferencia.
+    </p>
+</section>
+
+<!-- ================= OBJETIVOS ================= -->
+<section class="bloque">
+    <h2 class="titulo-seccion">Objetivos</h2>
+
+    <div class="objetivos-grid">
+        <div class="objetivo-card">
+            <h3>🐾 Rescate</h3>
+            <p>Auxiliar a perritos en riesgo y brindarles atención médica inmediata.</p>
+        </div>
+
+        <div class="objetivo-card">
+            <h3>💚 Rehabilitación</h3>
+            <p>Ofrecer refugio, cuidado emocional y recuperación física.</p>
+        </div>
+
+        <div class="objetivo-card">
+            <h3>🏠 Adopción Responsable</h3>
+            <p>Encontrar hogares seguros donde cada perrito viva feliz y amado.</p>
+        </div>
+
+        <div class="objetivo-card">
+            <h3>📚 Educación</h3>
+            <p>Promover la esterilización, vacunación y tenencia responsable.</p>
+        </div>
+
+        <div class="objetivo-card">
+            <h3>🤝 Comunidad</h3>
+            <p>Crear una red solidaria entre voluntarios, veterinarios y rescatistas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= INSTITUCIÓN ================= -->
+<section class="bloque-alt institucional">
+    <h2 class="titulo-seccion">Colores y Valores Institucionales</h2>
+    <p class="texto">
+        Nos enorgullece formar parte de una comunidad comprometida con el bienestar social y el servicio,
+        adoptando los colores verde, dorado y blanco como identidad de apoyo, solidaridad y excelencia.
+    </p>
+
+    <img src="imagenes/descarga.jpg" class="institucion-img" alt="Colores institucionales">
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2025 Doggy Tec - Rescate y protección animal</p>
+</footer>
+
+</body>
+</html>
