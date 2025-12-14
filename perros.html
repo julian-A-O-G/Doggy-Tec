@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perritos en Adopción – DoggyTec</title>
+
+<style>
+
+/* ===================== ESTILOS GENERALES ===================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #eaf1ff;
+    margin: 0;
+    padding: 0;
+    color: #020c27;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-color: #020c27;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: #d4af37;
+}
+
+/* Logo redondo */
+.logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0B4D26;
+}
+
+/* ===================== CONTENEDOR ===================== */
+.contenedor {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* GRID DE TARJETAS */
+.grid-perritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/* ===================== TARJETA DEL PERRITO ===================== */
+.card-perrito {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+    border-top: 7px solid #d4af37;
+}
+
+.card-perrito:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+}
+
+/* Imagen */
+.card-perrito img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Título del perro */
+.card-perrito h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #020c27;
+}
+
+/* Texto */
+.card-perrito p {
+    margin: 5px 0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* Etiquetas de información */
+.info {
+    background: #0B4D26;
+    color: white;
+    padding: 7px 12px;
+    display: inline-block;
+    font-size: 0.9rem;
+    border-radius: 7px;
+    margin: 4px 2px;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    text-align: center;
+    background-color: #020c27;
+    color: white;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="imagenes/logo.jpg" alt="Logo" class="logo">
+    <br><br>
+    <a href="pagina2.html">Página Principal</a>
+    <a href="inicio2.html">Inicio</a>
+    <a href="registrate.html">Registrarse</a>
+    <a href="contacto2.html">Contacto</a>
+    <h1>Nuestros Perritos en Adopción 🐾</h1>
+</header>
+
+
+<div class="contenedor">
+    
+    <div class="grid-perritos">
+
+        <!-- ===================== PERRITO 1 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0072.jpg" alt="Max">
+            <h3>Max</h3>
+            <span class="info">Raza: Mestizo mediano</span>
+            <span class="info">Peso: 12 kg</span>
+            <span class="info">Edad: 1 año</span>
+            <p><strong>Situación:</strong> Rescatado en el parque central, estaba desnutrido pero ahora está sano.</p>
+            <p>Es juguetón, muy noble y se lleva bien con personas y otros perritos.</p>
+        </div>
+
+        <!-- ===================== PERRITO 2 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0073.jpg" alt="Luna">
+            <h3>Luna</h3>
+            <span class="info">Raza: Criolla pequeña</span>
+            <span class="info">Peso: 7 kg</span>
+            <span class="info">Edad: 8 meses</span>
+            <p><strong>Situación:</strong> Fue abandonada en una caja, pero se recuperó por completo.</p>
+            <p>Es tierna, cariñosa y perfecta para vivir en departamento.</p>
+        </div>
+
+        <!-- ===================== PERRITO 3 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0074.jpg" alt="Toby">
+            <h3>Toby</h3>
+            <span class="info">Raza: Labrador mix</span>
+            <span class="info">Peso: 18 kg</span>
+            <span class="info">Edad: 2 años</span>
+            <p><strong>Situación:</strong> Rescatado en un lote baldío. Le encanta correr y jugar.</p>
+            <p>Ideal para familias activas o con patio grande.</p>
+        </div>
+
+        <!-- ===================== PERRITO 4 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0075.jpg" alt="Mila">
+            <h3>Mila</h3>
+            <span class="info">Raza: Desconocido</span>
+            <span class="info">Peso: 4 kg</span>
+            <span class="info">Edad: 10 meses</span>
+            <p><strong>Situación:</strong> Sobrevivió varios días sola en la calle.</p>
+            <p>Es valiente, dulce y muy apegada a las personas.</p>
+        </div>
+
+        <!-- ===================== PERRITO 5 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0070.jpg" alt="Rocky">
+            <h3>Rocky</h3>
+            <span class="info">Raza: Pastor mix</span>
+            <span class="info">Peso: 20 kg</span>
+            <span class="info">Edad: 3 años</span>
+            <p><strong>Situación:</strong> Fue entregado por dueño irresponsable.</p>
+            <p>Muy leal, protector y perfecto como compañero.</p>
+        </div>
+
+        <!-- ===================== PERRITO 6 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0071.jpg" alt="Canela">
+            <h3>Canela</h3>
+            <span class="info">Raza: Criolla mediana</span>
+            <span class="info">Peso: 11 kg</span>
+            <span class="info">Edad: 1.5 años</span>
+            <p><strong>Situación:</strong> Encontrada en un mercado, muy asustada.</p>
+            <p>Es tranquila, dulce y perfecta para compañía en casa.</p>
+        </div>
+
+        <!-- ===================== PERRITO 7 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0076.jpg" alt="Bruno">
+            <h3>Bruno</h3>
+            <span class="info">Raza: Mestizo grande</span>
+            <span class="info">Peso: 22 kg</span>
+            <span class="info">Edad: 3 años</span>
+            <p><strong>Situación:</strong> Rescatado bajo una tormenta.</p>
+            <p>Agradecido, fiel y obediente.</p>
+        </div>
+
+        <!-- ===================== PERRITO 8 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0077.jpg" alt="Sasha">
+            <h3>Sasha</h3>
+            <span class="info">Raza: Criolla</span>
+            <span class="info">Peso: 9 kg</span>
+            <span class="info">Edad: 1 año</span>
+            <p><strong>Situación:</strong> Rescatada en una carretera.</p>
+            <p>Muy sociable, apta para convivir con niños.</p>
+        </div>
+
+        <!-- ===================== PERRITO 9 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0078.jpg" alt="Nala">
+            <h3>Nala</h3>
+            <span class="info">Raza: Criolla pequeña</span>
+            <span class="info">Peso: 6 kg</span>
+            <span class="info">Edad: 2 años</span>
+            <p><strong>Situación:</strong> Encontrada con sus cachorros.</p>
+            <p>Muy cariñosa, tranquila y paciente.</p>
+        </div>
+
+        <!-- ===================== PERRITO 10 ===================== -->
+        <div class="card-perrito">
+            <img src="imagenes/IMG-20251107-WA0079.jpg" alt="Simón">
+            <h3>Simón</h3>
+            <span class="info">Raza: Border mix</span>
+            <span class="info">Peso: 14 kg</span>
+            <span class="info">Edad: 1.2 años</span>
+            <p><strong>Situación:</strong> Rescatado en mal estado, totalmente recuperado.</p>
+            <p>Es noble, amoroso y muy inteligente.</p>
+        </div>
+
+    </div>
+</div>
+
+
+<footer>
+    <p>© 2025 DoggyTec – Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
