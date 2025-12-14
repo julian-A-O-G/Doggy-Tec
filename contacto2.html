@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Doggy Tec</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+/* --------- ESTILOS GENERALES --------- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f4f7;
+    color: #1a1a1a;
+}
+
+/* --------- HEADER --------- */
+.header {
+    background-color: #001f3f; /* Azul marino */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.header nav a:hover,
+.header nav .activo {
+    color: #66b3ff;
+}
+
+/* --------- TÍTULO --------- */
+.titulo-contacto {
+    text-align: center;
+    padding: 60px 20px;
+    color: #001f3f;
+}
+
+.titulo-contacto h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.titulo-contacto p {
+    font-size: 18px;
+}
+
+/* --------- CARDS DE INFORMACIÓN --------- */
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 20px 40px;
+}
+
+.info-card {
+    background-color: white;
+    width: 230px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 35px;
+    color: #001f3f;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    margin-top: 5px;
+    color: #001f3f;
+}
+
+.info-card p {
+    font-size: 15px;
+}
+
+/* --------- FORMULARIO --------- */
+.formulario-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.formulario-section h2 {
+    color: #001f3f;
+    font-size: 28px;
+}
+
+.formulario {
+    margin-top: 25px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: #e8edf3;
+    font-size: 15px;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 140px;
+}
+
+.formulario button {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #003366;
+}
+
+/* --------- MAPA --------- */
+.mapa-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.mapa-section h2 {
+    color: #001f3f;
+    margin-bottom: 15px;
+}
+
+/* --------- FOOTER --------- */
+.footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+.logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0B4D26;
+        }
+</style>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="imagenes/logo.jpg" alt="Doggy Tec Logo" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="perros.html">Adopciones</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- TÍTULO -->
+    <section class="titulo-contacto">
+        <h1>Contacto</h1>
+        <p>Estamos aquí para ayudarte a encontrar a tu mejor amigo.</p>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN -->
+    <section class="info-container">
+        <div class="info-card">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Teléfono</h3>
+            <p>+52 246 123 4567</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>contacto@doggytec.org</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Ubicación</h3>
+            <p>Apizaco, Tlaxcala, México</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Horario</h3>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="formulario-section">
+        <h2>Envíanos un mensaje</h2>
+        <p>Responderemos lo más pronto posible 🐾</p>
+
+        <form class="formulario">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <!-- MAPA (Opcional, puedes quitarlo si no lo quieres) -->
+    <section class="mapa-section">
+        <h2>Encuéntranos aquí</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.890802374362!2d-98.122!3d19.415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI0JzU0LjAiTiA5OMKwMDcnMjEuOCJX!5e0!3m2!1ses!2smx!4v1700123456" 
+            height="300" 
+            style="border:0; width: 90%; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Doggy Tec - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
