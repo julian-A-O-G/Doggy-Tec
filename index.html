@@ -1,0 +1,1121 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>DOGGY TEC - Adopción Responsable</title> 
+    <link rel="stylesheet" href="perritos.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"> 
+ 
+    <style> 
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Encabezado rojo */
+        .encabezado {
+            background-color: #020c27;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Parte superior */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0B4D26;
+        }
+
+        .slogan {
+            flex: 1;
+            text-align: center;
+            font-size: 24px;
+            margin: 0;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .acciones a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .acciones a:hover {
+            color: #c4a13e;
+        }
+
+        /* Hero section con video */
+        .hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 12, 39, 0.7);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .boton-hero {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #0B4D26;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .boton-hero:hover {
+            background-color: #c4a13e;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sección de estadísticas */
+        .estadisticas {
+            background-color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .estadisticas h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #020c27;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .estadisticas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .estadistica-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #c4a13e;
+        }
+
+        .estadistica-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .estadistica-icono {
+            font-size: 2.5rem;
+            color: #0B4D26;
+            margin-bottom: 15px;
+        }
+
+        .estadistica-numero {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #020c27;
+            margin-bottom: 10px;
+        }
+
+        .estadistica-texto {
+            color: #666;
+            font-size: 1rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Tarjetas de perritos giratorias */
+        .tarjetas-contenedor {
+            padding: 100px 0;
+            background-color: #f5f5f5;
+        }
+
+        .tarjetas-contenedor h2 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #020c27;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .tarjetas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Estilos de tarjetas giratorias */
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 350px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            background: #FFFFFF;
+            border: 3px solid #c4a13e;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .flip-card-front {
+            background-color: #0B4D26;
+            color: white;
+            border: 3px solid #034818;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .flip-card-front h3 {
+            color: #55be73;
+            margin-bottom: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flip-card-back {
+            background-color: white;
+            color: rgb(8, 8, 8);
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-back h3 {
+            margin-bottom: 15px;
+            color: rgb(6, 6, 6);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .flip-card-back p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .boton-tarjeta {
+            display: inline-block;
+            background-color: #c4a13e;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .boton-tarjeta:hover {
+            background-color: #0B4D26;
+        }
+
+        /* Sección de proceso de adopción */
+        .proceso {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .proceso h2 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #020c27;
+            font-size: 2.5rem;
+            margin-bottom: 70px;
+        }
+
+        .proceso-pasos {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .proceso-pasos::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: #0B4D26;
+            z-index: 1;
+        }
+
+        .paso {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .paso-numero {
+            width: 80px;
+            height: 80px;
+            background: #0B4D26;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(11, 77, 38, 0.3);
+            border: 3px solid #c4a13e;
+        }
+
+        .paso h3 {
+            color: #020c27;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .paso p {
+            color: #666;
+            line-height: 1.6;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Sección de testimonios */
+        .testimonios {
+            padding: 100px 0;
+            background: #f5f5f5;
+        }
+
+        .testimonios h2 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #020c27;
+            font-size: 2.5rem;
+            margin-bottom: 70px;
+        }
+
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonio {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 2px solid #c4a13e;
+        }
+
+        .testimonio::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #0B4D26;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .testimonio-texto {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .testimonio-autor {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonio-autor img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #0B4D26;
+        }
+
+        .autor-info h4 {
+            color: #020c27;
+            margin-bottom: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .autor-info p {
+            color: #777;
+            font-size: 0.9rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Sección de Recursos */
+        .recursos {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .recursos-contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .recursos h2 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #020c27;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .recursos-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.6;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .recursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .recurso-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid #c4a13e;
+        }
+
+        .recurso-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .recurso-icono {
+            font-size: 2.5rem;
+            color: #0B4D26;
+            margin-bottom: 20px;
+        }
+
+        .recurso-item h3 {
+            color: #020c27;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .recurso-item p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .recurso-boton {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #0B4D26;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .recurso-boton:hover {
+            background-color: #c4a13e;
+            transform: translateY(-3px);
+        }
+
+        .transparencia {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid #0B4D26;
+            border: 2px solid #c4a13e;
+        }
+
+        .transparencia h3 {
+            color: #020c27;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .transparencia h3 i {
+            color: #0B4D26;
+            margin-right: 10px;
+        }
+
+        .transparencia p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .transparencia-boton {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #0B4D26;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .transparencia-boton:hover {
+            background-color: #c4a13e;
+            transform: translateY(-3px);
+        }
+
+        /* Sección CTA */
+        .cta {
+            padding: 100px 0;
+            background-color: #020c27;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .boton-cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #c4a13e;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .boton-cta:hover {
+            background: #0B4D26;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #020c27;
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #c4a13e;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #bbb;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-col a:hover {
+            color: #c4a13e;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #c4a13e;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .estadisticas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .proceso-pasos {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .proceso-pasos::before {
+                display: none;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .recursos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .estadisticas-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .recursos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .transparencia {
+                padding: 30px 20px;
+            }
+        }
+    </style> 
+</head> 
+<body> 
+ 
+    <!-- Header mejorado --> 
+    <header class="encabezado"> 
+        <div class="top-bar"> 
+            <div class="logo-container"> 
+                <img src="imagenes/logo.jpg" alt="Logo DoggyTec" class="logo"> 
+                <p class="slogan">Bienvenidos a DoggyTec</p> 
+            </div> 
+            <div class="acciones"> 
+                <a href="inicio2.html">Inicio</a> 
+                <a href="registrate.html">Regístrate</a> 
+                <a href="contacto2.html">Contacto</a> 
+                <a href="formulario.html">Test de Adopción</a> 
+            </div> 
+        </div> 
+    </header> 
+ 
+    <!-- Hero section con video --> 
+    <section class="hero"> 
+        <video autoplay muted loop class="hero-video"> 
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-dog-running-on-the-beach-1490-large.mp4" type="video/mp4"> 
+            <!-- Video de respaldo si el principal no carga --> 
+        </video> 
+        <div class="hero-overlay"></div> 
+        <div class="hero-content"> 
+            <h1>DALES UNA SEGUNDA OPORTUNIDAD</h1> 
+            <p>"Damos voz a quienes no la tienen y esperanza a quienes habian dejado de sentirla"</p> 
+            <a href="perros.html" class="boton-hero">Conoce a nuestros perritos</a> 
+        </div> 
+    </section> 
+ 
+    <!-- Sección de estadísticas --> 
+    <section class="estadisticas"> 
+        <h2>Nuestro Impacto</h2> 
+        <div class="estadisticas-grid"> 
+            <div class="estadistica-item fade-in"> 
+                <div class="estadistica-icono"> 
+                    <i class="fas fa-paw"></i> 
+                </div> 
+                <div class="estadistica-numero">10+</div> 
+                <div class="estadistica-texto">Perritos Rescatados</div> 
+            </div> 
+            <div class="estadistica-item fade-in"> 
+                <div class="estadistica-icono"> 
+                    <i class="fas fa-home"></i> 
+                </div> 
+                <div class="estadistica-numero">8+</div> 
+                <div class="estadistica-texto">Adopciones Exitosas</div> 
+            </div> 
+            <div class="estadistica-item fade-in"> 
+                <div class="estadistica-icono"> 
+                    <i class="fas fa-heart"></i> 
+                </div> 
+                <div class="estadistica-numero">98%</div> 
+                <div class="estadistica-texto">Tasa de Éxito</div> 
+            </div> 
+            <div class="estadistica-item fade-in"> 
+                <div class="estadistica-icono"> 
+                    <i class="fas fa-users"></i> 
+                </div> 
+                <div class="estadistica-numero">10+</div> 
+                <div class="estadistica-texto">Familias Felices</div> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Sección de tarjetas de perritos giratorias --> 
+    <section class="tarjetas-contenedor"> 
+        <h2>Nuestros Rescatados Buscan Hogar</h2> 
+        <div class="tarjetas-grid"> 
+            <!-- Tarjeta 1 --> 
+            <div class="flip-card fade-in"> 
+                <div class="flip-card-inner"> 
+                    <div class="flip-card-front"> 
+                        <img src="imagenes/IMG-20251107-WA0065.jpg" alt="Firulais"> 
+                        <h3>Firulais</h3> 
+                        <p>¡Haz click para conocer más!</p> 
+                    </div> 
+                    <div class="flip-card-back"> 
+                        <h3>Firulais</h3> 
+                        <p>Firulais fue rescatado de una situación de abandono. Es juguetón, cariñoso y se lleva bien con niños y otros perros.</p> 
+                        <p><strong>Edad:</strong> 2 años</p> 
+                        <p><strong>Peso:</strong> 12 kg</p> 
+                        <a href="firulais.html" class="boton-tarjeta">Conocer más</a> 
+                    </div> 
+                </div> 
+            </div> 
+ 
+            <!-- Tarjeta 2 --> 
+            <div class="flip-card fade-in"> 
+                <div class="flip-card-inner"> 
+                    <div class="flip-card-front"> 
+                        <img src="imagenes/4GFYMYJE5ZDWXGOEOYWI7XSIAQ.webp" alt="Brunito"> 
+                        <h3>Brunito</h3> 
+                        <p>¡Haz click para conocer más!</p> 
+                    </div> 
+                    <div class="flip-card-back"> 
+                        <h3>Brunito</h3> 
+                        <p>Brunito es un perrito tranquilo que disfruta de los paseos y las siestas. Ideal para familias o personas mayores.</p> 
+                        <p><strong>Edad:</strong> 4 años</p> 
+                        <p><strong>Peso:</strong> 8 kg</p> 
+                        <a href="brunito.html" class="boton-tarjeta">Conocer más</a> 
+                    </div> 
+                </div> 
+            </div> 
+ 
+            <!-- Tarjeta 3 --> 
+            <div class="flip-card fade-in"> 
+                <div class="flip-card-inner"> 
+                    <div class="flip-card-front"> 
+                        <img src="imagenes/0899eafb344f09b3656c18938718e1ff.jpg" alt="Canelo"> 
+                        <h3>Canelo</h3> 
+                        <p>¡Haz click para conocer más!</p> 
+                    </div> 
+                    <div class="flip-card-back"> 
+                        <h3>Canelo</h3> 
+                        <p>Canelo es energético y le encanta jugar. Está buscando una familia activa que lo lleve a correr y explorar.</p> 
+                        <p><strong>Edad:</strong> 3 años</p> 
+                        <p><strong>Peso:</strong> 15 kg</p> 
+                        <a href="canelo.html" class="boton-tarjeta">Conocer más</a> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Sección de proceso de adopción --> 
+    <section class="proceso"> 
+        <h2>¿Cómo Adoptar?</h2> 
+        <div class="proceso-pasos"> 
+            <div class="paso fade-in"> 
+                <div class="paso-numero">1</div> 
+                <h3>Conoce a nuestros perritos</h3> 
+                <p>Explora nuestras fichas de perritos disponibles y encuentra a tu compañero ideal.</p> 
+            </div> 
+            <div class="paso fade-in"> 
+                <div class="paso-numero">2</div> 
+                <h3>Solicita una entrevista</h3> 
+                <p>Completa nuestro formulario de adopción y programa una entrevista con nuestro equipo.</p> 
+            </div> 
+            <div class="paso fade-in"> 
+                <div class="paso-numero">3</div> 
+                <h3>Conoce a tu nuevo amigo</h3> 
+                <p>Visita nuestro centro y pasa tiempo con el perrito para asegurar una conexión perfecta.</p> 
+            </div> 
+            <div class="paso fade-in"> 
+                <div class="paso-numero">4</div> 
+                <h3>¡Llévatelo a casa!</h3> 
+                <p>Firma el contrato de adopción y recibe a tu nuevo miembro de la familia.</p> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Sección de testimonios --> 
+    <section class="testimonios"> 
+        <h2>Historias de Éxito</h2> 
+        <div class="testimonios-grid"> 
+            <div class="testimonio fade-in"> 
+                <p class="testimonio-texto">Adoptar a Luna fue la mejor decisión que hemos tomado como familia. El proceso fue muy profesional y nos han dado seguimiento incluso después de la adopción.</p> 
+                <div class="testimonio-autor"> 
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="María González"> 
+                    <div class="autor-info"> 
+                        <h4>María González</h4> 
+                        <p>Adoptó a Luna hace 6 meses</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="testimonio fade-in"> 
+                <p class="testimonio-texto">Como persona mayor, buscaba un compañero tranquilo. DoggyTec me ayudó a encontrar a Toby, quien ha llenado mi hogar de alegría. ¡Gracias!</p> 
+                <div class="testimonio-autor"> 
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Roberto Martínez"> 
+                    <div class="autor-info"> 
+                        <h4>Roberto Martínez</h4> 
+                        <p>Adoptó a Toby hace 1 año</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="testimonio fade-in"> 
+                <p class="testimonio-texto">Inicialmente teníamos dudas sobre adoptar, pero el equipo de DoggyTec nos guió en todo el proceso. Max se ha adaptado perfectamente a nuestra familia.</p> 
+                <div class="testimonio-autor"> 
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Laura Sánchez"> 
+                    <div class="autor-info"> 
+                        <h4>Laura Sánchez</h4> 
+                        <p>Adoptó a Max hace 8 meses</p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Sección de Recursos y Financiamiento --> 
+    <section class="recursos"> 
+        <div class="recursos-contenedor"> 
+            <h2 class="fade-in">¿Cómo Financiamos el Cuidado de Nuestros Perritos?</h2> 
+            <p class="recursos-intro fade-in">En DoggyTec, nuestro compromiso con el bienestar animal se sostiene gracias a diversas fuentes de apoyo que nos permiten rescatar, rehabilitar y mantener a nuestros perritos hasta encontrarles un hogar definitivo.</p> 
+            
+            <div class="recursos-grid"> 
+                <!-- Donaciones --> 
+                <div class="recurso-item fade-in"> 
+                    <div class="recurso-icono"> 
+                        <i class="fas fa-hand-holding-heart"></i> 
+                    </div> 
+                    <h3>Donaciones</h3> 
+                    <p>Aceptamos donaciones económicas y en especie (alimento, medicinas, juguetes, cobijas). Cada aporte se destina directamente al cuidado médico, alimentación y necesidades básicas de nuestros rescatados.</p> 
+                    <a href="donaciones.html" class="recurso-boton">Donar Ahora</a> 
+                </div> 
+                
+                <!-- Apadrinamiento --> 
+                <div class="recurso-item fade-in"> 
+                    <div class="recurso-icono"> 
+                        <i class="fas fa-user-friends"></i> 
+                    </div> 
+                    <h3>Apadrinamiento</h3> 
+                    <p>Puedes convertirte en padrino o madrina de uno de nuestros perritos, contribuyendo mensualmente con sus gastos. Recibirás actualizaciones periódicas y fotos de tu ahijado.</p> 
+                    <a href="apadrina.html" class="recurso-boton">Ser Padrino</a> 
+                </div> 
+                
+                <!-- Tienda Solidaria --> 
+                <div class="recurso-item fade-in"> 
+                    <div class="recurso-icono"> 
+                        <i class="fas fa-store"></i> 
+                    </div> 
+                    <h3>Tienda Solidaria</h3> 
+                    <p>Venta de productos como playeras, tazas, gorras y accesorios para mascotas con diseños exclusivos. El 100% de las ganancias se destina al refugio.</p> 
+                    <a href="tienda.html" class="recurso-boton">Visitar Tienda</a> 
+                </div> 
+                
+                <!-- Eventos y Talleres --> 
+                <div class="recurso-item fade-in"> 
+                    <div class="recurso-icono"> 
+                        <i class="fas fa-calendar-alt"></i> 
+                    </div> 
+                    <h3>Eventos y Talleres</h3> 
+                    <p>Organizamos jornadas de adopción, talleres de tenencia responsable, ferias pet-friendly y eventos comunitarios donde recibimos apoyo voluntario y donaciones.</p> 
+                    <a href="eventos.html" class="recurso-boton">Próximos Eventos</a> 
+                </div> 
+                
+                <!-- Alianzas Empresariales --> 
+                <div class="recurso-item fade-in"> 
+                    <div class="recurso-icono"> 
+                        <i class="fas fa-handshake"></i> 
+                    </div> 
+                    <h3>Alianzas Empresariales</h3> 
+                    <p>Colaboramos con empresas socialmente responsables que apoyan nuestra causa a través de patrocinios, donaciones corporativas o programas de voluntariado.</p> 
+                    <a href="alianzas.html" class="recurso-boton">Ser Aliado</a> 
+                </div> 
+                
+                <!-- Voluntariado --> 
+                <div class="recurso-item fade-in"> 
+                    <div class="recurso-icono"> 
+                        <i class="fas fa-hands-helping"></i> 
+                    </div> 
+                    <h3>Voluntariado</h3> 
+                    <p>El tiempo y talento de nuestros voluntarios son invaluables. Ayudan en cuidados diarios, paseos, rehabilitación, difusión y administración del refugio.</p> 
+                    <a href="voluntariado.html" class="recurso-boton">Unirse como Voluntario</a> 
+                </div> 
+            </div> 
+            
+            <div class="transparencia fade-in"> 
+                <h3><i class="fas fa-shield-alt"></i> Compromiso con la Transparencia</h3> 
+                <p>Publicamos informes trimestrales detallando el uso de los recursos recibidos. Creemos en la rendición de cuentas y en que cada donante conozca el impacto real de su contribución.</p> 
+                <a href="transparencia.html" class="transparencia-boton">Ver Informes de Transparencia</a> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Sección CTA --> 
+    <section class="cta"> 
+        <h2>¿Listo para Cambiar una Vida?</h2> 
+        <p>Al adoptar, no solo le das un hogar a un perrito necesitado, sino que ganas un amigo leal para siempre. Únete a nuestra comunidad de adoptantes responsables.</p> 
+        <a href="formulario.html" class="boton-cta">Comienza tu proceso de adopción</a> 
+    </section> 
+ 
+    <!-- Footer mejorado --> 
+    <footer class="footer"> 
+        <div class="footer-content"> 
+            <div class="footer-col"> 
+                <h3>DoggyTec</h3> 
+                <p>Conectando corazones con patitas desde 2020. Rescatamos, rehabilitamos y reubicamos perritos en situación de calle.</p> 
+                <div class="social-links"> 
+                    <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="#"><i class="fab fa-instagram"></i></a> 
+                    <a href="#"><i class="fab fa-twitter"></i></a> 
+                    <a href="#"><i class="fab fa-youtube"></i></a> 
+                </div> 
+            </div> 
+            <div class="footer-col"> 
+                <h3>Enlaces Rápidos</h3> 
+                <a href="inicio.html">Inicio</a> 
+                <a href="perros.html">Perritos Disponibles</a> 
+                <a href="formulario.html">Test de Adopción</a> 
+                <a href="registrate.html">Regístrate</a> 
+            </div> 
+            
+            <div class="footer-col"> 
+                <h3>Contacto</h3> 
+                <p><i class="fas fa-map-marker-alt"></i> DoggyTec</p> 
+                <p><i class="fas fa-phone"></i> (246) 123 4567</p> 
+                <p><i class="fas fa-envelope"></i> info@doggytec.com</p> 
+            </div> 
+        </div> 
+        <div class="footer-bottom"> 
+            <p>© 2025 DoggyTec - Instituto Tecnológico de Apizaco</p> 
+            <p>Rescate • Adopción • Amor</p> 
+        </div> 
+    </footer> 
+ 
+    <!-- Script para animaciones --> 
+    <script> 
+        // Animación de elementos al hacer scroll 
+        const fadeElements = document.querySelectorAll('.fade-in'); 
+         
+        const fadeObserver = new IntersectionObserver((entries) => { 
+            entries.forEach(entry => { 
+                if (entry.isIntersecting) { 
+                    entry.target.classList.add('visible'); 
+                } 
+            }); 
+        }, { threshold: 0.1 }); 
+         
+        fadeElements.forEach(el => fadeObserver.observe(el)); 
+         
+        // Efecto parallax para el hero 
+        window.addEventListener('scroll', function() { 
+            const scrolled = window.pageYOffset; 
+            const hero = document.querySelector('.hero'); 
+            hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)'; 
+        }); 
+    </script> 
+ 
+</body> 
+</html>
